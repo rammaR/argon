@@ -1,0 +1,36 @@
+<div class="row" *ngIf="codigo">
+    <div class="col-lg-6"></div>
+    <div class="col-lg-6 pull-right right text-right">
+        <button class="btn btn-primary" *ngIf="!isCadastrando" (click)="isCadastrando = true">
+            <i class="ni ni-fat-add"></i>
+        </button>
+    </div>
+</div>
+
+<div class="row" *ngIf="isCadastrando">
+    <div class="col-md-1">
+        Evento:
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="novoEvento">
+    </div>
+
+    <div class="col-md-1">
+        Data de Entrada:
+    </div>
+    <div class="col-lg-3">
+        <input type="text" class="form-control" [(ngModel)]="novaEntrada">
+    </div>
+
+    <div class="col-md-2">
+        <button class="btn btn-primary" (click)="saveTramite()">
+            <u>S</u>alvar
+        </button>
+    </div>
+
+    <div class="col-md-2">
+        <button class="btn btn-danger" (click)="cancelNewTramite()">
+            <u>C</u>ancelar
+        </button>
+    </div>
+</div>

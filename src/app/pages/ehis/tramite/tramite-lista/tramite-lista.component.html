@@ -1,0 +1,35 @@
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">
+                    Evento
+                </th>
+                <th scope="col">
+                    Data de Entrada
+                </th>
+                <th scope="col">
+
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let tramite of tramites">
+                <td>
+                    {{tramite.evento}}
+                </td>
+
+                <td>
+                    {{tramite.dataEntrada}}
+                </td>
+
+                <td>
+                    <button class="btn btn-secondary btn-warning">
+                        <i class="ni ni-fat-edit"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

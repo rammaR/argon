@@ -1,0 +1,54 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+        <div class="header-body">
+
+        </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--7">
+
+    <div class="card shadow border-0">
+        <div class="card-header">
+            <app-tramite-cadastro [codigo]="codigo" (onNewTramiteEvent)="updateLista($event)"></app-tramite-cadastro>
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Código da Área: {{area.codigo}}</h5>
+                            <ul class="list-group list-group-flush card-text">
+                                <li class="list-group-item">
+                                    Protocolo: {{area.protocolo}}
+                                </li>
+
+                                <li class="list-group-item">
+                                    Data de Entrada: {{area.dataEntrada}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <app-tramite-lista [tramites]="tramites"></app-tramite-lista>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card-footer">
+        <a [routerLink]="['/ehis/areas']" class="nav-link" routerLinkActive="active">
+            <button class="btn btn-outline-secondary rounded-pill" placement="right" ngbTooltip="Voltar">
+                <i class="ni ni-bold-left"></i>
+            </button>
+        </a>
+    </div>
+</div>
